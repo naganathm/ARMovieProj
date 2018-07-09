@@ -491,6 +491,21 @@ public class MovieController extends GLTextureView implements SurfaceTexture.OnF
 			}
 		});
 	}
+	private void initMediaPlayer() {
+		mMediaPlayer = new MediaPlayer();
+		setScreenOnWhilePlaying(true);
+		setLooping(true);
+
+		mMediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+			@Override
+			public void onCompletion(MediaPlayer mp) {
+				state = PlayerState.PAUSED;
+				if (onVideoEndedListener != null) {
+					onVideoEndedListener.onVideoEnded();
+				}
+			}
+		});
+	}
 
 	private void onDataSourceSet(MediaMetadataRetriever retriever) {
 		int videoWidth = Integer.parseInt(retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_VIDEO_WIDTH));
