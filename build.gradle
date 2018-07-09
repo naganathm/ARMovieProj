@@ -1,0 +1,32 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle-experimental:0.9.0'
+    }
+}
+
+
+allprojects {
+    gradle.projectsEvaluated {
+        tasks.withType(JavaCompile) {
+            options.compilerArgs << "-Xlint:unchecked" << "-Xlint:deprecation"
+        }
+    }
+    repositories {
+        maven { url "https://jitpack.io" }
+        maven { url "https://maven.java.net/content/groups/public/" }
+
+        jcenter()
+    }
+
+}
+
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

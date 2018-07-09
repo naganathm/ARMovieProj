@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+	android:id="@+id/topLayout"
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+
+<FrameLayout
+	android:id="@+id/mainLayout" 
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <com.alphamovie.lib.AlphaMovieView
+        android:id="@+id/video_player"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+		android:visibility="gone"
+        custom:alphaColor="#00ff00"
+        custom:accuracy="0.4"/>
+
+</FrameLayout >
+    
+</LinearLayout>

@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.alphamovie.library:alpha-movie-1.2.1">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.android/build-cache/1917b0e7e45cff674ead7e05d827f98d25663973/output/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.android/build-cache/1917b0e7e45cff674ead7e05d827f98d25663973/output/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.alphamovie.library/alpha-movie/1.2.1/74ddac522ab2414ccc7f711b2292ed4d5f5942c2/alpha-movie-1.2.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
